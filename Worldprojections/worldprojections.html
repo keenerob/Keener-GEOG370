@@ -8,8 +8,8 @@
 <body>
     <h1>In this project I learned how to display images in different projections</h1>
     
-    <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <h2 style="color:red">QGIS Map Projections</h2>
+    <p>Until a couple weeks ago, I didn't know there was something called a map projection or that it differed from a map. I took for granted that when maps represent the physical world at one scale or another, they rely on techniques which cause distortions. Recently, mapping techniques have improved a great deal and modern maps often hybridize several mapping styles to produce what we consider a normal looking map. Several of the first maps shown on this page look fairly normal. As you go further down, different mathematical orientations and priorities have different consequences for the appearance of the map. This is largely due to the earth being treated as a sphere, spheroid, and geoid respectively by different map projections. In QGIS, I implemented Indicatrix's various projections and learned about the effects of these different map-making approaches. I saw orientations which privileged one variable, like an axis, or several and thus formed hybrid maps. The last map I attempted to produce was a sort of regional map on the Pacific Ocean and the landmasses which border it. I learned that this would probably be better projected onto a more local map layer. </p>
     
   
     <h2>WGS84 Projection</h2>
@@ -40,9 +40,14 @@
     </a>
  
     <h2>54027Conic</h2>
-    <h3> Conic map projections view the world from the perspective of a pole. </h3>
+    <h3> Conic map projections view the world from the perspective of a pole, most often the North pole. </h3>
     <a href=".//maps/54027Conic.png">
     <img src=".//maps/54027Conic.png" alt="54027Conic" width='500px'>
+    </a>
+    <h2>102016Azumathal</h2>
+    <h3>This conic map conserves the South Pole's continuity as a land mass unlike the first conic map.</h3>
+    <a href=".//maps/102016Azumathal.png">
+    <img src=".//maps/102016Azumathal.png" alt="102016Azumathal" width='500px'>
     </a>
 
     <h2>53076WagnerVII</h2>
@@ -50,13 +55,9 @@
     <a href=".//maps/53076WagnerVII.png">
     <img src=".//maps/53076WagnerVII.png" alt="53076WagnerVII" width='500px'>
     </a>
-    <h2>102016Azumathal</h2>
-    <h3>This conic map conserves the South Pole's continuity, unlike the first conic map.</h3>
-    <a href=".//maps/102016Azumathal.png">
-    <img src=".//maps/102016Azumathal.png" alt="102016Azumathal" width='500px'>
-    </a>
+   
     <h2>Glitch in the system? 3832PDC Mercator</h2>
-    <h3>Regional maps don't work so well on global map layers. </h3>
+    <h3>Regional maps don't seem to work so well on global map layers. </h3>
     <a href=".//maps/3832PDC Mercator.png">
     <img src=".//maps/3832PDC Mercator.png" alt="3832PDC" width='500px'>
     </a>
@@ -64,8 +65,8 @@
    
 
 
-    <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
-    <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
+    <h2 style="color:red"> <u></u></h2>
+    <h3>EPSG: 3857, 53018, 54034, 54027, 102016, 53076, 3832</h3>
     <p></p>
     <h2>Data used for this project</h2>
     <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
