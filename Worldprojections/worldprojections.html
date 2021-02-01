@@ -6,57 +6,59 @@
     <title>Projections</title>
 </head>
 <body>
-    <h1>In this project I learned how to display images in different projections</h1>
+    <h1 style="color: red"> QGIS Map Projections </h1>;</h1>
     
-    <h2 style="color:red">QGIS Map Projections</h2>
-    <p>Until a couple weeks ago, I didn't know there was something called a map projection or that it differed from a map. I took for granted that when maps represent the physical world at one scale or another, they rely on techniques which cause distortions. Recently, mapping techniques have improved a great deal and modern maps often hybridize several mapping styles to produce what we consider a normal looking map. Several of the first maps shown on this page look fairly normal. As you go further down, different mathematical orientations and priorities have different consequences for the appearance of the map. This is largely due to the earth being treated as a sphere, spheroid, and geoid respectively by different map projections. In QGIS, I implemented Indicatrix's various projections and learned about the effects of these different map-making approaches. I saw orientations which privileged one variable, like an axis, or several and thus formed hybrid maps. The last map I attempted to produce was a sort of regional map on the Pacific Ocean and the landmasses which border it. I learned that this would probably be better projected onto a more local map layer. </p>
+    <p>Until about a week ago, I didn't know there was something called a map projection or that it differed from a map. I took for granted that when maps represent the physical world at one scale or another, they rely on techniques which cause distortions. Recently, mapping techniques have improved a great deal and modern maps often hybridize several mapping styles to produce what we consider a normal looking map. Several of the first maps shown on this page look fairly normal. As you go further down, different mathematical orientations and priorities have different consequences for the appearance of the map. This is largely due to the earth being treated as a sphere, spheroid, and geoid respectively by different map projections. In QGIS, I implemented Indicatrix's various projections and learned about the effects of these different map-making approaches. I saw orientations which privileged one variable, like an axis, or several and thus formed hybrid maps. The last map I attempted to produce was a sort of regional map on the Pacific Ocean and the landmasses which border it. I learned that this would probably be better projected onto a more local map layer. </p>
     
   
-    <h2>WGS84 Projection</h2>
+    <h2 style="color:red">WGS84 Projection</h2>
     <h3>An example map from Professor Arce-Nazario.</h3>
     <a href=".//maps/4326.png">
     <img src=".//maps/4326.png" alt="WGS84" width='500px'>
     </a>
-    <h2>Aitoff Projection</h2>
+
+    <h2 style="color:red">54043 Aitoff</h2>
     <h3>And a second one. </h3>
     <a href=".//maps/54043.png">
     <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
     </a>
 
-    <h2>3857 Pseudo Mercator</h2>
+    <h2 style="color:red">3857 Pseudo Mercator</h2>
     <h3>This cylindrical map projection is done on a sphere using an ellipsoid's semi-major axis. It conserves proportions at the poles, unlike the world cylindrical map shown below. </h3>
     <a href=".//maps/3857mercator.png">
     <img src=".//maps/3857mercator.png" alt="3857mercator" width='500px'>
     </a>
-    <h2>53018 Winkel Tripel</h2>
+    <h2 style="color:red">53018 Winkel Tripel</h2>
     <h3>Oscar Winkel began developing this projetion in the early 20th century. Winkel projections are modified from azumathal projections. There is an azumathal projection several maps below. </h3>
     <a href=".//maps/53018Winkel.png">
     <img src=".//maps/53018Winkel.png" alt="53018Winkel" width='500px'>
     </a>
-    <h2>54034 World Cylindrical</h2>
+
+    <h2 style="color:red">54034 World Cylindrical</h2>
     <h3>This cylindrical map heavily distorts proportions at the poles. </h3>
     <a href=".//maps/54034WorldCylindrical.png">
     <img src=".//maps/54034WorldCylindrical.png" alt="54034WorldCylindrical" width='500px'>
     </a>
  
-    <h2>54027Conic</h2>
+    <h2 style="color:red">54027 Conic</h2>
     <h3> Conic map projections view the world from the perspective of a pole, most often the North pole. </h3>
     <a href=".//maps/54027Conic.png">
     <img src=".//maps/54027Conic.png" alt="54027Conic" width='500px'>
     </a>
-    <h2>102016Azumathal</h2>
+    <h2 style="color:red"> 102016 Azumathal</h2>
     <h3>This conic map conserves the South Pole's continuity as a land mass unlike the first conic map.</h3>
     <a href=".//maps/102016Azumathal.png">
     <img src=".//maps/102016Azumathal.png" alt="102016Azumathal" width='500px'>
     </a>
 
     <h2>53076WagnerVII</h2>
+    <h2 style="color:red">53076 Wagner VII</h2>
     <h3>This map is similar to the Pseudo Mercator in that it maintains proportions between land masses and oceans well, while representing the earth as a spheroid.</h3>
     <a href=".//maps/53076WagnerVII.png">
     <img src=".//maps/53076WagnerVII.png" alt="53076WagnerVII" width='500px'>
     </a>
    
-    <h2>Glitch in the system? 3832PDC Mercator</h2>
+    <h2 style="color:red">Glitch in the system? 3832 PDC Mercator</h2>
     <h3>Regional maps don't seem to work so well on global map layers. </h3>
     <a href=".//maps/3832PDC Mercator.png">
     <img src=".//maps/3832PDC Mercator.png" alt="3832PDC" width='500px'>
@@ -65,10 +67,10 @@
    
 
 
-    <h2 style="color:red"> <u></u></h2>
+    <h2 style="color:red">Projection tags shown on this webpage: <u></u></h2>
     <h3>EPSG: 3857, 53018, 54034, 54027, 102016, 53076, 3832</h3>
     <p></p>
-    <h2>Data used for this project</h2>
+    <h2>Data used for this project:</h2>
     <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
 </body>
 </html>
