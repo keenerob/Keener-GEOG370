@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+ crossorigin=""></script>
+
+
+    <body>
+        <div id="mapid"></div>
+        <style>
+            #mapid{width: 900px; height: 500px;}
+        </style>
+    
+        <script>
+            var map =L.map('mapid').setView([35.91127,-79.04918], 17);
+             
+            L.tileLayer ('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',).addTo(map)
+
+            var davisIcon = L.icon({
+                iconUrl: 'https://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Folders-OS-Libraries-alt-Metro-icon.png',
+                iconSize: [50,50],
+                popupAnchor: [0,0]
+                
+            });
+             
+           
+            var davisPopup = "Davis Library<br/><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Davis_Library_UNC_Front_1.JPG/800px-Davis_Library_UNC_Front_1.JPG'width='100px'/>";
+            
+            L.marker([35.91127,-79.04918],{icon:davisIcon}).addTo(map)
+        
+                    .bindPopup(davisPopup)
+                    
+                
+         var deyIcon = L.icon({
+                iconUrl: 'https://p.kindpng.com/picc/s/19-194629_clip-art-stack-of-books-school-books-icon.png',
+                iconSize: [50,50],
+                popupAnchor: [0,0]
+                
+            });
+             
+           
+            var deyPopup = "Dey Hall<br/><img src='https://www.wunc.org/sites/wunc/files/styles/x_large/public/201601/police_dye.jpg'width='100px'/>";
+            
+            L.marker([35.91102, -79.05094],{icon:deyIcon}).addTo(map)
+        
+                    .bindPopup(deyPopup)
+                    
+                
+                    
+            var planetIcon = L.icon({
+                iconUrl: 'https://www.pngfind.com/pngs/m/223-2232869_png-file-svg-moon-icon-circle-png-transparent.png',
+                iconSize: [50,50],
+                popupAnchor: [0,0]
+                
+            });
+             
+           
+            var planetPopup = "Morehead Planetarium<br/><img src='https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_411,q_75,w_620/https://assets.simpleviewinc.com/simpleview/image/upload/crm/chapelhill/Morehead-Planetarium-Sceince-Center-5ea50ca75056b3a_5ea50d90-5056-b3a8-496aef3392379209.jpg'width='100px'/>";
+            
+            L.marker([35.91479, -79.05040],{icon:planetIcon}).addTo(map)
+        
+                    .bindPopup(planetPopup)
+           
+    
+           
+        </script>    
+    
+    
+       
+
+   
+
+</body>
+</html>
