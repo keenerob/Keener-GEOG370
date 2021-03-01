@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaflet Preview</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
+  <style type="text/css">
+    body {
+       margin: 0;
+       padding: 0;
+    }
+    html, body, #map{
+       width: 100%;
+       height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+
+    
+       var map = L.map('map').setView([40.656070245277476, -73.98216389174664], 14.0);
+
+          // NEED TO: transparent litchfield png, descriptions
+
+
+
+      var MonumentIcon = L.icon({
+
+      iconUrl: 'https://img.icons8.com/pastel-glyph/2x/washington-monument-.png',
+      iconSize: [50,50],
+      popupAnchor: [0,0] 
+      }); 
+      var Monumentpopup = "<b>Monument to 148000 Soldiers</b> <br>This monument was erected in 1869 just four years after the end of the Civil War as a tribute to fallen soldiers. It stands on Battle Hill in Green-Wood Cemetary, amongst a number of tombstones organized by various battles. The monument was unchanged and unmoved since its original placement. It offered an interesting marker in the everchanging urban landscape of Brooklyn.</br>  <br/><img src='https://gwc-14060.kxcdn.com/wp-content/uploads/2010/11/right_sit_civil_war_old02.jpg'width='100px'/>";
+
+      var daMarkerII = (L.marker([40.6570746,-73.9919161], {icon: MonumentIcon}).addTo(map)
+      .bindPopup (Monumentpopup));
+
+
+
+      var StationIcon = L.icon({
+
+      iconUrl: 'https://cdn.iconscout.com/icon/premium/png-512-thumb/train-station-827029.png',
+      iconSize: [50,50],
+      popupAnchor: [0,0] 
+      }); 
+      var Stationpopup = "<b>Prospect Avenue Station</b> <br>Originally constructed between 1909 and 1912, the Prospect Avenue Station serves two local subway lines. It has seen several rennovations, two of which took place since this aerial photograph was taken. Although it is an underground station, it is now more visible thanks to the introduction of new aboveground lines shown in more recent photos. Recent construction offer an historical glimpse underground, where transportation lines already existed for over a century. </br> <br/><img src='https://upload.wikimedia.org/wikipedia/commons/1/11/Casa_Amadeo_Prospect_Av_IRT_plat_jeh.jpg'width='100px'/>";
+
+      var daMarkerIII = ( L.marker([40.6653265,-73.9948164], {icon: StationIcon}).addTo(map)
+      .bindPopup (Stationpopup));
+
+
+
+
+      var LitchfieldIcon = L.icon({
+
+      iconUrl: 'https://www.kindpng.com/picc/m/109-1096048_castle-castle-icon-png-transparent-png.png',
+      iconSize: [50,50],
+      popupAnchor: [0,0] 
+      }); 
+      var Litchfieldpopup = "<b>Litchfield Villa</b> <br> This Italianate mansion was built in the mid 1850s. It was first built for a wealthy railroad and real estate developer on land leased from the city before Prospect Park was constructed. In 1882, it became the home of the Brooklyn Park Commission. It has since seen misuse, rennovation, and restoration as an historic site. Like the monument in Green-Wood Cemetary, it has been relatively unchanged since its construction.</br> <br/><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Litchfield_Villa_PPW_jeh.jpg/1280px-Litchfield_Villa_PPW_jeh.jpg'width='100px'/>";
+
+      var daMarkerIV = ( L.marker([40.6654672,-73.9752086], {icon: LitchfieldIcon}).addTo(map)
+      .bindPopup (Litchfieldpopup));
+
+
+
+      var OSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	    maxZoom: 19,
+	    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      var daPhoto = L.tileLayer('redhooktiles/{z}/{x}/{y}.png', {
+        minZoom: 12,
+        maxZoom: 16,
+        tms: false,
+        attribution: 'OpenStreetMap'
+      })
+
+      var daTiles= {
+        "Open Street Map":OSM,
+        "Redhook Photo (1954)":daPhoto
+      }
+
+      var daVectors = {
+       
+        "Monument to 148000 Soldiers": daMarkerII,
+        "Prospect Avenue Station": daMarkerIII,
+        "Litchfield Villa" : daMarkerIV
+      }
+
+      L.control.layers(daTiles, daVectors).addTo(map); 
+
+
+
+  </script>
+</body>
+</html>
