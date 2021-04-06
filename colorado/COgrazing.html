@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+    <body>
+    <h1> Public Lands Usage in Colorado</h1>
+    <h2> Robert Keener</h2> 
+    <p> I have had an ongoing interest in BLM land for several of years, yet I have always found that information regarding their land is rather inaccessible. To exercise the new techniques we have learned, I decided to ask how public lands are used? To narrow the topic, I was curious about private uses of these so-called public lands. Often, the state will lease out tracts of land for cattle grazing or for resource extraction. I decided to visually depict the relationship between these two separate interests in Colorado. As the map shows, there is a great deal of land which is actively being grazed by permission or lease, and a fair amount of public land also being mined. In some cases, these two even overlap. I found this disconcerting, especially as much of the same land could support geothermal or solar energy production without disturbing range animals.</p>
+    <p> In any case, I used several techniques to visually represent the data that I found. First, I completed a symmetric difference to subtract inactive grazing areas from the total grazing areas. Then, I completed a dissolve to get rid of boundary lines between contiguous tracts of land. At this point, I overlaid three different vector files concerning land used for Oil, Gas, or Coal extraction. I performed a union to convert these to a single layer and then added a relatively small buffer of .5 kilometers to highlight their size and diminish their harsh appearance. While I considered performing the same buffer to the grazing areas, it diminished their aesthetic quality while showing no discerible difference in area. This map shows that resource extraction takes place near or on lands used for grazing, particularly in the two western thirds of Colorado. The land areas in the east, while suitable for grazing, are likely private. The public land areas which are used in the east are used for resource extraction, not grazing.  I also added a layer featuring the State Border of Colorado for background and some major cities for spatial context. Including county lines seemed irrelevant and it certainly made the image too busy. I did not find a scale helpful. I also had issues finding an appropriate projection. Even this local Colorado projection appears distorted. </p>
+    <h2>Public Lands Usage in Colorado</h2>
+    <a href="resources/COgrazingmap.png">
+    <img src="resources/COgrazingmap.png"  width='1100px'> </a>
+
+
+    <h2>Data sources:</h2>
+    <a href="https://www.blm.gov/site-page/services-geospatial-gis-data-colorado"> Bureau of Land Management (Colorado) </a>
+    
+    <p></p>
+    <a href="https://data-cdphe.opendata.arcgis.com/datasets/b20b5c04576145be9428b4b4f28490c2_0?geometry=-112.540%2C37.514%2C-98.555%2C40.502"> Colorado Cities Point Data</a>
+    <p></p>
+    <a href="https://data-cdphe.opendata.arcgis.com/datasets/4402a8e032ed49eb8b37fd729e4e8f03_9?geometry=-112.543%2C37.517%2C-98.558%2C40.504"> Colorado State Boundaries Data</a>
+    <p></p>
+    <a href="resources/activegrazing.shp"> Active Grazing Shapefile</a>
+    <p></p>
+    <a href="resources/bufferedCOG2.shp"> Buffered Oil, Gas, and Coal Shapefile</a>
+    
+
+    </body>
+    </html>
